@@ -1,0 +1,37 @@
+<div class="container my-5 py-5 z-depth-1 text-center text-lg-left">
+
+  <section class="px-md-5 mx-md-5 dark-grey-text">
+
+    <div class="row">
+
+      <div class="col-lg-6 mb-4 animated fadeIn">
+
+        <h3 class="font-weight-bold">{{heroe.nombre | uppercase}} </h3>
+        <p class="lead">{{heroe.casa}}</p>
+
+        <p class="text-muted">
+          {{ heroe.bio }}
+        </p>
+
+        <p>Primera aparición en <strong>{{heroe.aparicion | date:'y'}}</strong> </p>
+        <img [src]="heroe.logo" width="50" class="img-fluid mb-5"
+            [alt]="heroe.logo">
+            <br>
+
+        <a class="btn btn-info btn-md ml-0" [routerLink]="['/heroes']" role="button">Regresar...</a>
+
+      </div>
+
+      <div class="col-lg-6 mb-4">
+
+        <div class="view overlay z-depth-1-half animated fadeIn">
+          <img [src]="heroe.img" class="img-fluid" alt="">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</div>

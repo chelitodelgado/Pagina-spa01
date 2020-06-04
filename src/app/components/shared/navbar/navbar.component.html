@@ -1,0 +1,31 @@
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark indigo">
+
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#">
+      <img src="assets/img/A-64.png" height="30" alt="">
+    </a>
+  </mdb-navbar-brand>
+
+  <links>
+
+    <ul class="navbar-nav mr-auto animated fadeIn">
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link waves-light" [routerLink]="['/home']" mdbWavesEffect>Home</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link waves-light" [routerLink]="['/heroes']" mdbWavesEffect>Heroes</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link waves-light" [routerLink]="['/sobre']" mdbWavesEffect>Sobre</a>
+      </li>
+    </ul>
+
+    <form class="form-inline waves-light" mdbWavesEffect>
+      <div class="md-form my-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Buscar heroe" (keyup.enter)="buscarHeroe(buscarTexto.value)" #buscarTexto>
+      </div>
+    </form>
+
+  </links>
+
+</mdb-navbar>

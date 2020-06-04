@@ -1,0 +1,33 @@
+<div class="row">
+
+  <div *ngFor="let heroe of heroes; let i = index" class="col-md-4 p-2 animated fadeIn">
+
+    <mdb-card cascade="true" wider="true">
+
+      <div class="view view-cascade overlay waves-light" mdbWavesEffect>
+        <mdb-card-img [src]="heroe.img" [alt]="heroe.img"></mdb-card-img>
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <mdb-card-body cascade="true" class="text-center">
+
+        <h4 class="card-title">
+          <strong>{{heroe.nombre}}</strong>
+        </h4>
+        <h5 class="indigo-text">
+          <strong>{{heroe.casa}}</strong>
+        </h5>
+        <mdb-card-text>
+          {{heroe.bio}}
+        </mdb-card-text>
+        <button (click)="verHeroe(i)" class="btn btn-outline-primary btn btn-block">Ver más...</button>
+        <!-- <a [routerLink]="['heroe',i]" class="btn btn-outline-primary btn btn-block">Ver más link...</a> -->
+      </mdb-card-body>
+
+    </mdb-card>
+
+  </div>
+
+</div>
